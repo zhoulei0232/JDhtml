@@ -1,0 +1,697 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+
+
+/*.site-nav部分开始*/
+    .site-nav{
+        height: 30px;
+        font: 400 12px/30px "simsun";
+        background-color: #F1F1F1;
+    }
+    .site-nav-send,.site-nav-r .fore{
+        position: relative;
+        padding:0 25px 0 10px;
+    }
+    .site-nav i {
+        position: absolute;
+        top: 12px;
+        right:7px;
+        width: 15px;
+        height: 7px;
+        font: 400 13px/14px "consolas";
+        overflow: hidden;
+    }
+    .site-nav-send s,.fore s{
+        position: absolute;
+        top:-7px;
+    }
+    .site-nav-send:hover {
+        background-color: #fff;
+    }
+    .site-nav-r li:hover {
+        background-color: #fff;
+    }
+
+    .site-nav a:hover s{
+        top:-1px ;
+        color: #B61D1D;
+    }
+    .site-nav-r li {
+        float: left;
+        padding: 0 10px;
+    }
+    .site-nav-r .line {
+        width:1px;
+        height: 12px;
+        background-color: #ddd;
+        padding: 0px;
+        margin-top: 9px;
+    }
+    .site-nav-r .tel{
+        padding-left:26px;
+    }
+    .tel span{
+        position: absolute;
+        top:5px;
+        left: 8px;
+        width:13px;
+        height: 18px;
+        background: url("../images/tel.png") no-repeat ;
+    }
+    /*.site-nav部分结束*/
+    /*.top-banner开始*/
+    .top-banner .w{position: relative;
+    }
+    .close-banner{
+        width: 19px;
+        height: 19px;
+        background: url("../images/close-banner.png");
+        position: absolute;
+        top:5px;
+        right: 5px;
+        cursor: pointer;
+    }
+    .close-banner:hover{background-position: 19px 19px;
+    }
+    /*.top-banner over*/
+    /*.search strat*/
+    .search-logo{
+        float: left;
+        width: 362px;
+        height: 60px;
+        padding: 20px 0;
+    }
+    .search-logo a{
+        display: inline-block;
+        float: left;
+        width: 270px;
+        height: 60px;
+        text-indent: -99em;
+        background: url("../images/logo.png") no-repeat;
+    }
+    .search-input{
+        float: left;
+        width: 536px;
+        height: 36px;
+        padding-top:27px;
+    }
+    .search-input input{
+        float: left;
+        width:452px;
+        height: 32px;
+        font:400 12px/32px "microsoft yahei";
+        text-indent: 4px;
+        border: 2px solid #B61D1D;
+        border-right: none;
+    }
+    .search-input .se{
+        float: right;
+        width:82px;
+        height: 36px;
+        text-align: center;
+        color: white;
+        font:700 16px/36px "microsoft yahei";
+        background-color:#B61D1D ;
+    }
+    .search-car{
+        float: right;
+        width: 139px;
+        height: 34px;
+        margin:27px 65px 0 0;
+        border: 1px solid #DFDFDF;
+        background-color:#ABFBAB;
+
+        position: relative;
+    }
+    .search-car .icon1{
+        width: 28px;
+        height: 28px;
+        background: url("../images/tel.png") no-repeat;
+        background-position: 0px -50px;
+        position: absolute;
+        left:16px;
+    }
+    .search-car .icon2{
+        padding:0 10px 0 43px;
+        line-height: 34px;
+    }
+    .search-car .icon3{
+        font:400 13px/34px "microsoft yahei" ;
+    }
+    .search-car .icon4{
+        width: 16px ;
+        height: 14px;
+        position: absolute;
+        border-radius: 7px  7px 7px 0;
+        background-color:#B61D1D;
+        color: white;
+        text-align: center;
+        top:-10px;
+        left:100px;
+    }
+    .search-moreA{
+        float: left;
+        width: 536px;
+        height: 28px;
+
+    }
+    .search-moreA a {float: left;
+        padding-right: 11px;
+        font: 400 12px/28px "microsoft yahei";
+    }
+
+    /*.shortcut部分开始*/
+
+
+
+
+
+
+    /*.shortcut部分开始*/
+
+    /*.shortcut部分开始*/
+
+    .shortcut{
+        height: 44px;
+        border-bottom: 2px solid #B1191A;
+    }
+    .shortcut-nav-menu{
+        border-left:1px solid #B1191A;
+        border-bottom:1px solid #B1191A;
+        position: relative;
+        z-index: 1;
+
+    }
+    .shortcut-nav-menu-all a{
+        display: inline-block;
+        width: 200px;
+        height: 44px;
+        background-color: #B1191A;
+        font: 400 14px/44px "microsoft yahei";
+        color: white;
+        padding-left:10px;
+    }
+
+
+
+
+
+.shortcut-nav-items{
+        width: 710px;
+        height: 44px;
+    }
+    .shortcut-nav-items li{
+        float: left;
+        margin-left: 40px;
+        font: 400 16px/44px "microsoft yahei";
+        color: black;
+        height: 44px;
+    }
+    .shortcut-nav-img{
+        margin: -10px 40px 0 0;
+    }
+    /*.shortcut部分结束*/
+
+    /*slider部分开始*/
+    .shortcut-nav-menu-one{
+        width: 210px;
+        margin-top: 2px;
+        height: 465px;
+        background-color: #B1191A;
+        position: relative;
+        z-index: 1;
+    }
+    .shortcut-nav-menu-one li{
+        display: block;
+        width: 200px;
+        height: 31px;
+        padding-left: 10px;
+    }
+    .shortcut-nav-menu-one a{
+        float: left;
+        color: white;
+        font-size: 13px;
+        line-height: 31px;
+        font-family:  "microsoft yahei";
+
+    }
+    .shortcut-nav-menu-one span{
+        color: white;
+        float: right;
+        font-size: 9px;
+        line-height: 31px;
+        font-family: "consolas";
+        padding-right: 13px;
+    }
+    .shortcut-nav-menu-one li:hover {
+        background-color: white;
+    }
+    .shortcut-nav-menu-one li:hover a{
+        color: #B1191A;
+    }
+    .shortcut-nav-menu-one li:hover span {
+        color: #B1191A;
+    }
+
+
+
+
+    .slider {
+        position: relative;
+        background: url("../images/slider.jpg");
+        width: 730px;
+        height: 454px;
+        float: left;
+        margin: 12px 9px 0 9px;
+        z-index: 1;
+    }
+    .subbanner a{
+        position: absolute;
+        width: 1726px;
+        height: 625px;
+        left:50%;
+        margin-left: -863px;
+        background: url(../images/subbanner.jpg);
+    }
+    .slider-bottom{
+        width: 132px;
+        left: 50%;
+        position: absolute;
+        bottom: 8px;
+        margin-left: -66px;
+    }
+    .slider-bottom a{
+        text-align: center;
+        margin: 0 2px;
+        float: left;
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-color: #3E3E3E;
+        color: white;
+        border-radius:9px;
+    }
+    .point-all{
+        width: 100% ;
+        position: absolute;
+        top:50%;
+    }
+      /*箭头代码公用*/
+    .point{
+        width: 35px;
+        height: 30px;
+        margin-top:-15px;
+        text-align: center;
+        font: 400 18px/30px "consolas";
+        color: white;
+        background-color: rgba(0,0,0,0.3);
+    }
+    .point-left{
+        cursor: pointer;
+        float: left;
+    }
+    .point-right{
+        cursor: pointer;
+        float: right;
+    }
+    .point-left:hover{
+        background-color: rgba(0,0,0,0.5);
+    }
+    .point-right:hover{
+        background-color: rgba(0,0,0,0.5);
+    }
+    /*箭头代码公用*/
+
+
+
+
+    .slider-news {
+        position: relative;
+        z-index: 1;
+        margin-top: 12px;
+        float: right;
+        width: 250px;
+        height: 454px;
+
+    }
+    .slider-news-top{
+        width: 248px;
+        height: 372px;
+        border: 1px solid #E4E4E4;
+        overflow: hidden;
+    }
+    .slider-news-top .fast{
+        height: 15px;
+        padding: 9px 15px 8px 15px;
+        border-bottom: 1px dashed #E4E4E4;
+    }
+    .fast h3{
+        float: left;
+        font-size: 15px;
+        font-family:  "microsoft yahei";
+    }
+    .fast i{
+        float: right;
+        font-size: 12px;
+        font-family:  "microsoft yahei";
+    }
+    .slider-news-top .notice {
+        padding: 5px 0 5px 10px;
+    }
+    .notice li{
+        font:400 12px/24px  "microsoft yahei";
+    }
+    .notice s {
+        font-weight: 700;
+    }
+    .slider-news-bottom{
+        width: 250px;
+        height: 75px;
+        margin-top: 5px;
+        background-color: #B1191A;
+    }
+    .fly {
+        width: 260px;
+
+    }
+    .fly li{
+        position: relative;
+        float: left;
+        width:62px;
+        height: 70px;
+        border-top: 1px solid #E4E4E4;
+        border-right: 1px solid #E4E4E4;
+
+    }
+    .fly i{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background: url("../images/fly.png");
+        top: 15px;
+        left:18px;
+    }
+    .fly a{
+        display: block;
+        margin-top: 45px;
+        text-align: center;
+        font:400 12px/24px  "microsoft yahei";
+    }
+    .fly .m2{
+        background-position:0 -25px ;
+    }
+    .fly .m3{
+        background-position:0 -50px ;
+    }
+    .fly .m4{
+        background-position:0 -75px ;
+    }
+    .fly .m5{
+        background-position:0 -100px ;
+    }
+    .fly .m6{
+        background-position:0 -125px ;
+    }
+    .fly .m7{
+        background-position:0 -150px ;
+    }
+    .fly .m8{
+        background-position:0 -175px ;
+    }
+    .fly .m9{
+        background-position:0 -200px ;
+    }
+    .fly .m10{
+        background-position:0 -225px ;
+    }
+    .fly .m11{
+        background-position:0 -250px ;
+    }
+    .fly .m12{
+        background-position:0 -275px ;
+    }
+       /*jieshu*/
+
+    .column-left a {
+        position: relative;
+        z-index: 1;
+        float: left;
+        margin-top: 10px;
+        width: 210px;
+        height: 151px;
+        background: url("../images/pic1.jpg");
+    }
+    .column-right{
+        position: relative;
+        margin-top: 10px;
+        float: right;
+        width: 1000px;
+        height: 164px;
+        overflow: hidden;
+    }
+    .column-right ul{
+        width: 2500px;
+    }
+    .column-right li{
+        float: left;
+        margin-left:1px ;
+    }
+
+
+
+
+
+
+
+
+    /*.foot strat*/
+    .footer-top-slogen{
+        width:100%;
+        height: 54px;
+        padding: 20px 0;
+        position: relative;
+        background-color: #F5F5F5;
+    }
+
+    .footer-top-slogen-icon {
+        position: absolute;
+        left:50%;
+    }
+
+    .footer-top-slogen-icon1{
+        margin-left:-604px;
+    }
+
+    .footer-top-slogen-icon2{
+        margin-left:-302px;
+    }
+
+    .footer-top-slogen-icon4{
+        margin-left:304px;
+    }
+
+    .footer-top-shopping dl{
+        font: 400 15px/29px "microsoft yahei";
+        margin:18px 112px 3px 0 ;
+    }
+
+    .footer-top-shopping dd{
+        font:400 12px/20px "microsoft yahei";
+    }
+    .footer-top-shopping .last-dl{
+        margin:18px 30px 3px 0 ;
+    }
+    .cgs {
+        float: right;
+        width: 203px;
+        height: 169px;
+        padding-left: 10px;
+        background: url("../images/china.png") no-repeat 0 -131px ;
+        margin:18px 30px 0 0;
+    }
+    .cgs span { font: 400 15px/29px "microsoft yahei";
+    }
+    .cgs p {
+        padding-top: 8px;}
+    .cgs a{
+        margin-top: 20px;
+        float: right;
+    }
+
+    .footer-bottom{
+        border-top:1px solid #DFDFDF;
+        text-align: center;
+        margin-top: 20px ;
+
+    }
+    .footer-bottom-links{
+        padding: 23px 0 16px 0;
+    }
+    .footer-bottom-links a{
+        margin:0 8px;
+    }
+    .footer-bottom p{
+        font: 400 12px/26px "microsoft yahei";
+    }
+    .footer-bottom img{margin: 0 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
